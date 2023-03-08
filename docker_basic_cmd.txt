@@ -40,6 +40,13 @@ docker run -d <img_id>/<cont_name>
 
 
 
+------------------------Docker Network------------------------------
+
+sudo docker network ls
+
+--To inspect bridge networks inside docker container
+sudo docker inspect bridge
+
 
 
 
