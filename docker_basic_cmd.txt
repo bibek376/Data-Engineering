@@ -1,0 +1,62 @@
+
+
+------------------------------------------Docker Commands---------------------------------------------
+
+1.run:- start a container
+
+docker run ngix
+
+2. ps:- list containers
+
+docker ps
+
+3.stop:- To stop container
+
+docker stop <name>/<cont_id>
+
+4.rm:- Remove a container
+
+docker rm <name>/<cont_id>
+
+5.images:- List images
+
+docker images
+
+6.rmi:- Remove images
+
+docker rmi <img_name>
+
+7.pull:- Download an image
+
+docker pull <repo_name>
+
+8.exec:- execute a command
+
+docker exec -it 
+
+9.run:- attach and detach
+
+docker run -d <img_id>/<cont_name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
