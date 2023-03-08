@@ -45,15 +45,25 @@ docker run -d <img_id>/<cont_name>
 sudo docker network ls
 
 --To inspect bridge networks inside docker container
-sudo docker inspect bridge
+sudo docker network inspect bridge
 
 
+--------------------------------------------------------------
+
+--Run python with via bash 
+
+sudo docker run -it --entrypoint=bash python:3.9
 
 
+---------------------Docker Build------------------------------
 
+sudo docker build -t python:pandas .
 
-
-
+where,
+python-->REPOSITORY name
+pandas-->TAG name
+.  ----->current directory where the Dockerfile is present
+s
 
 
 
