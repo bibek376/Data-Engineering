@@ -63,7 +63,7 @@ where,
 python-->REPOSITORY name
 pandas-->TAG name
 .  ----->current directory where the Dockerfile is present
-s
+
 
 
 
