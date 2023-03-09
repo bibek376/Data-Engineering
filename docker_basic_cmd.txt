@@ -38,6 +38,7 @@ docker exec -it
 
 docker run -d <img_id>/<cont_name>
 
+ git rm -r --cached /home/bibek/Desktop/Data_Engineering/Week_1/data_mapping_for_postgres/
 
 
 ------------------------Docker Network------------------------------
