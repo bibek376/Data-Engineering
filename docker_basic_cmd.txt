@@ -82,8 +82,9 @@ where,
 	
 
 
+----------------docker restart------------------
 
-
+sudo docker restart <container_id>
 
 
 
