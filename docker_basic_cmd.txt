@@ -68,12 +68,14 @@ pandas-->TAG name
 
 -----------------Install PostgreSQL in Docker---------------------------
 
-sudo docker run -it \
+sudo docker run -itd \
 	-e POSTGRES_USER="postgres" \
 	-e POSTGRES_PASSWORD="password" \
 	-e POSTGRES_DB="ny_taxi_db" \
 	-v /home/bibek/Desktop/Data_Engineering/Week_1/data_mapping_for_postgres:/var/lib/postgresql/data \
 	-p 5000:5432 \
+	--network=pg_network \
+	--name pgadmin1 \
 	postgres:13
 	
 where,
@@ -85,6 +87,31 @@ where,
 ----------------docker restart------------------
 
 sudo docker restart <container_id>
+
+
+
+------------------Network-----------------------
+
+sudo docker network create pg_network
+
+--------------------------------------Install pgadmin in docker---------------------------------
+
+sudo docker run -it \
+	 -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+	 -e PGADMIN_DEFAULT_PASSWORD="password" \
+	 -p 8080:80 \
+	 --network=pg_network \
+	 --name pgadmin \
+	 dpage/pgadmin4
+
+
+
+
+
+
+
+
+
 
 
 
