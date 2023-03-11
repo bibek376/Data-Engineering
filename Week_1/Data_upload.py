@@ -26,6 +26,11 @@ def main(params):
 
 
 
+#   CSV download
+    csv_name='output.csv'
+    
+
+
 
 parser = argparse.ArgumentParser(description='Ingest CSV data to Postgres')
 

@@ -96,7 +96,7 @@ sudo docker network create pg_network
 
 --------------------------------------Install pgadmin in docker---------------------------------
 
-sudo docker run -it \
+sudo docker run -itd \
 	 -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
 	 -e PGADMIN_DEFAULT_PASSWORD="password" \
 	 -p 8080:80 \
@@ -107,7 +107,9 @@ sudo docker run -it \
 
 
 
+-----------------------Docker Install Redhat Linux-------------------
 
+sudo docker run -it redhat/ubi8:8.7
 
 
 
