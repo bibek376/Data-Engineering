@@ -1,0 +1,8 @@
+
+------------------------------Jupyter-Script To Python Script----------------------------------------
+
+jupyter nbconvert --to=script upload_data.ipynb
+
+
+
+
