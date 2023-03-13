@@ -123,7 +123,14 @@ sudo docker run -it redhat/ubi8:8.7
 
 
 
-
+sudo docker run -itd \
+	-e POSTGRES_USER="postgres" \
+	-e POSTGRES_PASSWORD="password" \
+	-e POSTGRES_DB="ny_taxi_db" \
+	-v /home/bibek/Desktop/Data_Engineering/Week_1/data_mapping_for_postgres:/var/lib/postgresql/data \
+	-p 5000:5432 \
+	postgres:13
+	
 
 
 
