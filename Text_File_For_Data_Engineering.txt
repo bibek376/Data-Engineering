@@ -8,14 +8,14 @@ jupyter nbconvert --to=script Data_upload.ipynb
 ------------------------------------------------Python Ingest-----------------------------------------
 
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-python Data_upload.py \
+python data_ingest.py \
 	--user_name=postgres \
     --password=password \
     --host=localhost \
     --port=5000 \
     --database=ny_taxi_db \
     --table_name=ny_taxi_data \
-    --url_of_csv_file=$(URL)
+    --url_of_csv_file=https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
 
 
 
