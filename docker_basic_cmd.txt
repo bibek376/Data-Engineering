@@ -88,7 +88,13 @@ where,
 
 sudo docker restart <container_id>
 
+-----------------docker-compose-------------------
 
+--To start docker compose
+sudo docker compose up 
+
+--To down docker compose
+sudo docker compose down
 
 ------------------Network-----------------------
 
