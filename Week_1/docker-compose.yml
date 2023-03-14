@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: imageName
+    environment:
+      - name=value
+  pgadmin:
+    image: imageName
+    environment:
+      - name=value
