@@ -44,7 +44,10 @@ docker run -d <img_id>/<cont_name>
 
 sudo docker rm -vf $(docker ps -aq)
 
+11.To delete all the images,
 
+
+sudo docker rmi -f $(sudo docker images -aq)
 
 ------------------------Docker Network------------------------------
 
