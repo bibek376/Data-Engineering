@@ -40,6 +40,11 @@ docker run -d <img_id>/<cont_name>
 
  git rm -r --cached /home/bibek/Desktop/Data_Engineering/Week_1/data_mapping_for_postgres/
 
+10.To delete all containers including its volumes use,
+
+sudo docker rm -vf $(docker ps -aq)
+
+
 
 ------------------------Docker Network------------------------------
 
