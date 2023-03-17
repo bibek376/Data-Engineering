@@ -46,8 +46,17 @@ sudo docker rm -vf $(docker ps -aq)
 
 11.To delete all the images,
 
-
 sudo docker rmi -f $(sudo docker images -aq)
+
+12.To delete containers which are in exited state
+
+sudo docker rm $(sudo docker ps -a -f status=exited -q)
+
+13. To delete containers which are in created state
+
+sudo docker rm $(sudo docker ps -a -f status=created -q)
+
+
 
 ------------------------Docker Network------------------------------
 
