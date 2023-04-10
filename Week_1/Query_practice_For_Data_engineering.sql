@@ -40,8 +40,28 @@ select * from zones z ;
 delete from zones where "LocationID" =10;
 
 --number of trips per day
-select date_trunc('DAY',ntd.tpep_dropoff_datetime),count(*)  
+select cast(ntd.tpep_dropoff_datetime as DATE) "day",count(*)  
 from ny_taxi_data ntd 
 group by 1
 order by 2 desc;
+
+
+select cast(ntd.tpep_dropoff_datetime as DATE) "day",count(*),
+max(ntd.total_amount) 
+from ny_taxi_data ntd 
+group by 1
+order by 2 desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
