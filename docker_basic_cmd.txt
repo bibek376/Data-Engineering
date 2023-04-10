@@ -66,6 +66,14 @@ sudo docker network ls
 sudo docker network inspect bridge
 
 
+--To check current running docker network
+
+sudo docker ps -q
+
+then,
+
+sudo docker inspect  fa2507cf0f8a
+
 --------------------------------------------------------------
 
 --Run python with via bash 
@@ -134,7 +142,8 @@ sudo docker run -itd \
 
 sudo docker run -it redhat/ubi8:8.7
 
-
+sudo docker run -d --name oracle_db
+container-registry.oracle.com/database/enterprise:21.3.0.0
 
 
 
