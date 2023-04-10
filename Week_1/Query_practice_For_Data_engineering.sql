@@ -33,6 +33,11 @@ where zpu."LocationID" is null
 or zdo."LocationID" is null;
 
 
+---delete record
+
+select * from zones z ;
+
+delete from zones where "LocationID" =10;
 
 
 
