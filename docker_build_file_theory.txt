@@ -33,3 +33,31 @@ RUN pip install NumPy sklearn
 CMD [ “python”, “./LinearRegression.py”]
 
 # specifies the executable path of the program and running the python file in the container.
+
+
+
+
+docker run linear-reg
+# docker run is the command and “linear-reg” is the name of the container.
+
+docker run -t -i linear-reg
+# where -I stands for interactive mode and -t would provide a sudo terminal to input the values for the file.
+
+docker build -t simpleflask.
+
+docker run -p 5000:5000 simpleflask
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
