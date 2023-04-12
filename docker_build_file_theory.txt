@@ -4,5 +4,32 @@ Docker concentrate on 3 things:
 2. Docker image: Image is a template for running containers
 3. Docker container: The container is the actual process where we have the package project
 
+Docker Main CMD
+
+FROM — This command is used to provide a base image
+
+ADD/COPY — This command would add the program file to the container
+
+RUN — this command would install additional dependencies or packages like NumPy, pandas
+
+CMD — this command would specify the executable path of the program.
 
 
+
+Example:-
+
+FROM python:3.8
+
+# specifies that the base image is python 3.8
+
+ADD LinearRegression.py.
+
+# add/ copy specifies to add the program file LinearRegression to the container current folder. The period, in the end, specifies the current folder.
+
+RUN pip install NumPy sklearn
+
+# this would install NumPy, sklearn packages to the container
+
+CMD [ “python”, “./LinearRegression.py”]
+
+# specifies the executable path of the program and running the python file in the container.
