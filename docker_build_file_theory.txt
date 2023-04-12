@@ -1,0 +1,8 @@
+Docker concentrate on 3 things:
+
+1. Docker file: A blueprint for building images
+2. Docker image: Image is a template for running containers
+3. Docker container: The container is the actual process where we have the package project
+
+
+
