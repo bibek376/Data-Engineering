@@ -21,7 +21,7 @@ from trino.exceptions import TrinoUserError
 
 default_args={
     'owner':'Bibek Rawat',
-    'email': ["bibek.rawat@omnicommediagroup.com"],
+    'email': ["bibekrawat123@gmail.com"],
     'email_on_failure': True,
     'email_on_retry': False,
     'retries': 2,
