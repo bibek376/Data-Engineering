@@ -40,7 +40,7 @@ def populate_sov_queue_table() -> None:
             # Handle None for is_brand and use 'NULL' in SQL if is_brand is None
             is_brand_sql = 'NULL' if is_brand is None else int(is_brand)
 
-            sql_queue_stmt = f"""INSERT INTO internaltoolset.algo.AlgoSovQueue (
+            sql_queue_stmt = f"""INSERT INTO algo.AlgoSovQueue (
                                     client_id, date_from, date_to, domain_id, run_date, 
                                     completion_date, is_brand, country_code, search_engine_id, 
                                     frequency, status_code)
@@ -57,7 +57,7 @@ def populate_sov_queue_table() -> None:
                                         'M' as frequency,
                                         0 as status_code
                                     FROM
-                                        internaltoolset.algo.Projects p
+                                         algo.Projects p
                                     INNER JOIN dbo.tbl_clients tc
                                     On
                                         p.ClientId = tc.client_id
@@ -87,7 +87,7 @@ def populate_sev_queue_table() -> None:
         for sev in sev:
             sql_queue_stmt = f"""INSERT
                                 INTO
-                                internaltoolset.algo.AlgoSevQueue (client_id,
+                                algo.AlgoSevQueue (client_id,
                                 client_url_id,
                                 competitor_url_id,
                                 url,
@@ -115,7 +115,7 @@ def populate_sev_queue_table() -> None:
                                 'M' as frequency,
                                 0 as status_code
                             FROM
-                                internaltoolset.algo.Projects p
+                                 algo.Projects p
                             INNER JOIN web.websitesearchengines w 
                             ON
                                 w.client_id = p.ClientId
@@ -147,7 +147,7 @@ def populate_sev_queue_table() -> None:
                                 'M' as frequency,
                                 0 as status_code
                             FROM
-                                internaltoolset.algo.Projects p
+                                 algo.Projects p
                             INNER JOIN web.websitesearchengines w 
                             ON
                                 w.client_id = p.ClientId
@@ -175,7 +175,7 @@ def populate_search_voluem_queue_table() -> None:
 
         sql_queue_stmt = f"""INSERT
                                     INTO
-                                    internaltoolset.algo.AlgoSearchVolumeQueue (client_id,
+                                     algo.AlgoSearchVolumeQueue (client_id,
                                     date_from,
                                     date_to,
                                     run_date,
@@ -197,8 +197,8 @@ def populate_search_voluem_queue_table() -> None:
                                     'M' as frequency,
                                     0 as status_code
                                 FROM
-                                    internaltoolset.algo.Projects p
-                                INNER JOIN internaltoolset.web.websitesearchengines w
+                                     algo.Projects p
+                                INNER JOIN  web.websitesearchengines w
                                 ON
                                     p.ClientId = w.client_id
                                 WHERE p.IsActive = 1
@@ -215,7 +215,7 @@ with DAG(dag_id = "reset_queue_data",
         start_date = datetime(2024, 1, 1),
         schedule_interval = None,
         default_args = default_args,
-        tags = ['ResetGSCQueue','DateFrom','ClientID','Python','FlightDeck'],
+        tags = ['ResetGSCQueue','DateFrom','ClientID','Python'],
         catchup = True,
         description = 'Populate Queue Table'
         ) as dag:
